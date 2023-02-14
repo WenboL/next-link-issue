@@ -8,10 +8,10 @@ export default function Before() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <Link href='/demo/before/target'>Click to redirect /demo/before/target, which click and openIn new tab has different behavior</Link>
+        <Link href='/demo/before/target'>Click to redirect, ref='/demo/before/target', which click works but openIn new tab landed wrongly</Link>
       </div>
       <div className={styles.description}>
-        <Link href='/before/target'>Click to redirect /before/target (works properly)</Link>
+        <Link href='/before/target'>Click to redirect, ref='/before/target' (click won't work)</Link>
       </div>
     </main>
   )
