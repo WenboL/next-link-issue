@@ -21,16 +21,16 @@ Given a configured basePath of "/demo"
 
 From location /demo/before, I have:
 1. Link that redirects to /demo/before/target. The href is specified as '/demo/before/target'. 
-2. Another Link that has href set to '/target'.
+2. Another Link that has href set to '/before/target'.
 
 ## Expected behavior
 Both Link component should redirect user to the same result.
 
-## Actual result:
-Both Link will open the correct url upon mouse click. 
-But for Link 1, by open the link in the new tab, I am getting the wrong url '/demo/demo/before/target'.
+## Actual result: 
+Link 1: Click to redirect works, but open in a new tab landed on wrong url: 'http://localhost:3000/demo/demo/before/target'.
+Link 2: Click to redirect landed on wrong url: 'http://localhost:3000/before/target', open in a new tab works.
 
 By hovering over Link 1, the url at bottom left corner is incorrect: 
 
-![image](https://github.csnzoo.com/storage/user/9000/files/850871fc-e5b4-4c4b-b4b2-e1b2c174fe39)
+
 
